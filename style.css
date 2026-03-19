@@ -344,6 +344,132 @@ section:first-of-type { padding-top: 0; }
   font-size: 0.75rem;
 }
 
+/* GITHUB */
+#github { background: var(--surface); }
+
+.gh-loading {
+  color: var(--muted);
+  text-align: center;
+  padding: 24px;
+  font-size: 0.95rem;
+}
+
+/* Profile card */
+.gh-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.gh-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.gh-profile-info { flex: 1; min-width: 200px; }
+
+.gh-profile-info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.gh-username {
+  color: var(--accent2);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.gh-bio {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  max-width: 480px;
+}
+
+.gh-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gh-stat {
+  text-align: center;
+}
+
+.gh-stat span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent2);
+}
+
+.gh-stat small { color: var(--muted); font-size: 0.75rem; }
+
+/* Repos grid */
+.gh-repos-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.gh-repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.gh-repo-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.2s, transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gh-repo-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+.gh-repo-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent2);
+}
+
+.gh-repo-desc {
+  color: var(--muted);
+  font-size: 0.82rem;
+  flex: 1;
+}
+
+.gh-repo-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.gh-repo-meta span { display: flex; align-items: center; gap: 4px; }
+
+.gh-view-all { text-align: center; }
+
 /* CONTACT */
 .contact-inner { text-align: center; }
 
