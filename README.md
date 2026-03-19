@@ -1,16 +1,25 @@
-# Personal Portfolio
+# Portfolio Website
 
-My personal developer portfolio website showcasing my skills and projects.
+## Overview
+A personal portfolio website that presents projects, skills, and profile information in a structured layout.
 
-## Sections
-- **Hero** — Introduction with name, title, and CTA buttons
-- **About** — Background, stats summary
-- **Skills** — HTML/CSS, JavaScript, Node.js, Tools
-- **Projects** — Cards for all 6+ projects with links
-- **Contact** — Links to GitHub
-
-## How to Run
-Open `index.html` in any browser. No installation needed.
+## Learning Outcomes
+- Build multi-section responsive layouts
+- Create project cards and navigation flow
+- Present technical work clearly for recruiters and peers
 
 ## Tech Stack
-HTML · CSS · JavaScript
+- HTML
+- CSS
+- JavaScript
+
+## Run Locally
+1. Open `index.html` in a browser.
+
+## Common Mistakes
+- Overloading the page with too much text
+- Missing links or unclear project descriptions
+
+## Next Improvements
+- Add case-study pages for each project
+- Add accessibility audit improvements
