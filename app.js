@@ -33,6 +33,16 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// Reviews tab switcher
+document.querySelectorAll('.review-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.review-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.review-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.target).classList.add('active');
+  });
+});
+
 // GitHub API integration
 const GH_USER = 'AliShah1029384756';
 const GH_API  = `https://api.github.com/users/${GH_USER}`;
