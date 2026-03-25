@@ -1,12 +1,10 @@
 # Portfolio Website
 
-## Overview
-A personal portfolio website that presents projects, skills, and profile information in a structured layout.
+![Project](https://img.shields.io/badge/Project-Frontend-0ea5e9)
+![Purpose](https://img.shields.io/badge/Purpose-Professional%20Showcase-16a34a)
 
-## Learning Outcomes
-- Build multi-section responsive layouts
-- Create project cards and navigation flow
-- Present technical work clearly for recruiters and peers
+## Overview
+Personal portfolio website presenting projects, skills, and profile information in a structured layout.
 
 ## Tech Stack
 - HTML
@@ -15,6 +13,11 @@ A personal portfolio website that presents projects, skills, and profile informa
 
 ## Run Locally
 1. Open `index.html` in a browser.
+
+## Learning Outcomes
+- Build multi-section responsive layouts
+- Create project cards and navigation flow
+- Present technical work clearly for recruiters and peers
 
 ## Common Mistakes
 - Overloading the page with too much text
