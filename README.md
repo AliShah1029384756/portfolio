@@ -3,6 +3,9 @@
 ![Project](https://img.shields.io/badge/Project-Frontend-0ea5e9)
 ![Purpose](https://img.shields.io/badge/Purpose-Professional%20Showcase-16a34a)
 
+## 🎨 Live Demo
+Open [`index.html`](index.html) in your browser to view the portfolio.
+
 ## Overview
 Personal portfolio website presenting projects, skills, and profile information in a structured layout.
 
