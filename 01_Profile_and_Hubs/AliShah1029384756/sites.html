@@ -319,6 +319,385 @@
 
   .section-note { color: var(--text-muted); max-width: 780px; }
 
+  .hero.hero-split {
+    min-height: calc(100vh - 4.8rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 7rem 1.5rem 3.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-copy {
+    text-align: left;
+  }
+
+  .hero-copy .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .hero-copy .hero-stats {
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+  }
+
+  .hero-lead {
+    color: var(--text-muted);
+    max-width: 720px;
+    margin: 0 auto 0 0;
+    font-size: 1.05rem;
+  }
+
+  .hero-visual {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .preview-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  }
+
+  .preview-panel img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  .preview-overlay {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    background: rgba(10, 17, 31, 0.78);
+    border: 1px solid var(--border);
+    border-radius: 0.95rem;
+    padding: 0.85rem 0.95rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  .preview-label {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.18rem 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.63rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    margin-bottom: 0.45rem;
+  }
+
+  .preview-overlay strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .preview-overlay p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .preview-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .preview-mini {
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    background: rgba(16, 27, 48, 0.82);
+    padding: 0.8rem 0.85rem;
+  }
+
+  .preview-mini strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .preview-mini span {
+    color: var(--text-dim);
+    font-size: 0.76rem;
+  }
+
+  .directory-shell,
+  .directory-section {
+    padding-top: 1.25rem;
+  }
+
+  .directory-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .directory-summary {
+    display: flex;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+  }
+
+  .directory-summary span {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.26rem 0.6rem;
+    color: var(--text-dim);
+    font-size: 0.73rem;
+    background: rgba(124, 183, 255, 0.05);
+  }
+
+  .directory-filter-shell {
+    margin-top: 1rem;
+  }
+
+  .directory-search-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .directory-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .utility-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .lab-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .lab-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .lab-notes {
+    align-self: stretch;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--surface);
+    padding: 1.1rem;
+  }
+
+  .lab-notes h3 {
+    font-family: var(--font-display);
+    margin-bottom: 0.45rem;
+  }
+
+  .lab-notes p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+
+  .directory-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 1.05rem;
+    background: linear-gradient(180deg, rgba(16, 27, 48, 0.95), rgba(14, 20, 34, 0.95));
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+  }
+
+  .directory-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-strong);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+  }
+
+  .directory-card.featured-card {
+    min-height: 100%;
+  }
+
+  .directory-card.utility-card,
+  .directory-card.lab-card {
+    min-height: 100%;
+  }
+
+  .card-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 118px;
+    border-radius: 0.9rem;
+    padding: 0.85rem;
+    background: var(--preview-gradient, linear-gradient(135deg, var(--accent), var(--accent-3)));
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .card-preview span {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    letter-spacing: -0.03em;
+  }
+
+  .card-preview small {
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.9;
+  }
+
+  .card-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.85rem;
+  }
+
+  .card-mark {
+    width: 2.55rem;
+    min-width: 2.55rem;
+    height: 2.55rem;
+    border-radius: 0.75rem;
+    display: grid;
+    place-items: center;
+    background: rgba(45, 212, 191, 0.14);
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 800;
+  }
+
+  .card-eyebrow {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.15rem;
+  }
+
+  .directory-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.06rem;
+    line-height: 1.25;
+  }
+
+  .card-tagline {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+
+  .card-badges {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+  }
+
+  .card-badges .chip {
+    color: #b9d3ff;
+    background: rgba(96, 165, 250, 0.08);
+  }
+
+  .card-cta {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .status {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  .status.live { color: var(--ok); border-color: rgba(52,211,153,0.35); }
+  .status.maintained { color: var(--accent); border-color: rgba(45,212,191,0.35); }
+  .status.curated { color: var(--accent-2); border-color: rgba(251,191,36,0.35); }
+
+  .preview-uni { --preview-gradient: linear-gradient(135deg, #fbbf24 0%, #60a5fa 100%); }
+  .preview-web { --preview-gradient: linear-gradient(135deg, #2dd4bf 0%, #60a5fa 100%); }
+  .preview-hi { --preview-gradient: linear-gradient(135deg, #f97316 0%, #fb7185 100%); }
+  .preview-edu { --preview-gradient: linear-gradient(135deg, #34d399 0%, #2dd4bf 100%); }
+  .preview-fast { --preview-gradient: linear-gradient(135deg, #fbbf24 0%, #f97316 100%); }
+  .preview-projects { --preview-gradient: linear-gradient(135deg, #60a5fa 0%, #6366f1 100%); }
+  .preview-cv { --preview-gradient: linear-gradient(135deg, #22c55e 0%, #14b8a6 100%); }
+  .preview-about { --preview-gradient: linear-gradient(135deg, #fb7185 0%, #f59e0b 100%); }
+  .preview-github { --preview-gradient: linear-gradient(135deg, #334155 0%, #0f172a 100%); }
+  .preview-portfolio { --preview-gradient: linear-gradient(135deg, #60a5fa 0%, #2dd4bf 100%); }
+  .preview-calc { --preview-gradient: linear-gradient(135deg, #f97316 0%, #fbbf24 100%); }
+  .preview-todo { --preview-gradient: linear-gradient(135deg, #34d399 0%, #22c55e 100%); }
+  .preview-expense { --preview-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); }
+  .preview-weather { --preview-gradient: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%); }
+  .preview-quiz { --preview-gradient: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%); }
+  .preview-notes { --preview-gradient: linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%); }
+  .preview-html { --preview-gradient: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); }
+
+  .preview-uni,
+  .preview-web,
+  .preview-hi,
+  .preview-edu,
+  .preview-fast,
+  .preview-projects,
+  .preview-cv,
+  .preview-about,
+  .preview-github,
+  .preview-portfolio,
+  .preview-calc,
+  .preview-todo,
+  .preview-expense,
+  .preview-weather,
+  .preview-quiz,
+  .preview-notes,
+  .preview-html {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .results-row {
+    margin-top: 0.55rem;
+    color: var(--text-dim);
+    font-size: 0.73rem;
+    font-family: var(--font-mono);
+  }
+
+  .is-hidden { display: none !important; }
+
+  .quick-nav-links a:focus-visible,
+  .directory-card:focus-visible,
+  .card-cta:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
   .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -555,6 +934,10 @@
   @media (max-width: 920px) {
     .hero-stats { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
     .search-row { grid-template-columns: 1fr; }
+    .hero.hero-split { grid-template-columns: 1fr; min-height: 0; }
+    .hero-copy .hero-actions { justify-content: flex-start; }
+    .hero-copy .hero-stats { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+    .lab-split { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 768px) {
@@ -574,6 +957,9 @@
     }
     .nav-links.active { display: flex; }
     .hero { min-height: 76vh; }
+    .hero.hero-split { padding-top: 6.6rem; padding-bottom: 2.5rem; }
+    .directory-head { align-items: flex-start; }
+    .directory-search-row { grid-template-columns: 1fr; }
     .quick-nav { top: 3.85rem; }
     .quick-nav-inner { padding: 0.66rem 1rem; }
   }
@@ -624,341 +1010,260 @@
   </div>
 </nav>
 
-<header class="hero">
-  <div class="hero-inner">
-    <p class="hero-kicker">Organized Discovery Layer</p>
-    <h1>One <span>Portfolio Map</span><br>Zero Guesswork</h1>
-    <p>Find flagship work first, then drill into hubs and apps by audience, stack, and status. Keyboard tip: press slash to jump to Hub Search and question mark to open shortcuts.</p>
+<header class="hero hero-split">
+  <div class="hero-copy">
+    <p class="hero-kicker">Centralized portfolio directory</p>
+    <h1>A <span>Portfolio Map</span> Built for Fast Scanning</h1>
+    <p class="hero-lead">A centralized directory of my academic work, educational resources, and software experiments.</p>
     <div class="hero-actions">
-      <a href="#featured" class="btn btn-primary">Start With Featured</a>
-      <a href="#hubs" class="btn btn-secondary">Browse Hubs</a>
-      <a href="#apps" class="btn btn-secondary">Browse Apps</a>
+      <a href="#ecosystems" class="btn btn-primary">View Flagship Ecosystems</a>
+      <a href="#lab" class="btn btn-secondary">Open Developer Lab</a>
+      <a href="https://github.com/AliShah1029384756" target="_blank" rel="noreferrer noopener" class="btn btn-secondary">Open GitHub</a>
     </div>
     <div class="hero-stats" aria-label="Portfolio map metrics">
-      <div class="stat-box"><strong>3</strong><span>Primary Featured</span></div>
-      <div class="stat-box"><strong>3</strong><span>Spotlight Tracks</span></div>
-      <div class="stat-box"><strong>5</strong><span>Specialized Hubs</span></div>
-      <div class="stat-box"><strong>8</strong><span>Frontend Apps</span></div>
+      <div class="stat-box"><strong>16+</strong><span>Projects</span></div>
+      <div class="stat-box"><strong>58+</strong><span>Guides</span></div>
+      <div class="stat-box"><strong>400+</strong><span>Resources</span></div>
+      <div class="stat-box"><strong>8</strong><span>Lab Apps</span></div>
     </div>
   </div>
+  <aside class="hero-visual" aria-label="Directory preview">
+    <div class="preview-panel preview-cover">
+      <img src="images/portfolio-cover.png" alt="Portfolio directory preview cover">
+      <div class="preview-overlay">
+        <span class="preview-label">Live Directory</span>
+        <strong>Hub of Hubs</strong>
+        <p>Flagship hubs, utility pages, and frontend lab in one scan.</p>
+      </div>
+    </div>
+    <div class="preview-mini-grid">
+      <div class="preview-mini"><strong>UNI</strong><span>16 projects</span></div>
+      <div class="preview-mini"><strong>EDU</strong><span>400+ links</span></div>
+      <div class="preview-mini"><strong>WEB</strong><span>9 modules</span></div>
+      <div class="preview-mini"><strong>LAB</strong><span>Practice + production</span></div>
+    </div>
+  </aside>
 </header>
 
-<div class="quick-nav" aria-label="Section navigation">
+<div class="quick-nav" aria-label="Directory sections">
   <div class="quick-nav-inner">
     <div class="quick-nav-links">
-      <a href="#featured">Featured</a>
-      <a href="#spotlight">Spotlight</a>
-      <a href="#hubs">Hubs</a>
-      <a href="#apps">Apps</a>
-      <a href="#paths">Start Paths</a>
+      <a href="#ecosystems">Ecosystems</a>
+      <a href="#resources">Resources</a>
+      <a href="#lab">Developer Lab</a>
     </div>
-    <div class="shortcut-note">Shortcuts: ? for panel, Alt+1..5 page jumps</div>
+    <div class="shortcut-note">Shortcuts: ? for panel, / to focus search</div>
   </div>
 </div>
 
 <main id="main">
-  <section id="featured">
+  <section class="directory-shell" id="directory">
     <div class="container">
-      <div class="section-head">
-        <div class="section-kicker">Featured</div>
-        <h2>Top 3 Flagship Projects</h2>
-        <p class="section-note">These are prioritized first for recruiters and collaborators: strongest technical signal, clearer outcomes, and direct case evidence.</p>
+      <div class="section-head directory-head">
+        <div>
+          <div class="section-kicker">Portfolio directory</div>
+          <h2>Scannable, filterable, and grouped by purpose</h2>
+          <p class="section-note">Use the filters to jump between academic work, learning tools, personal projects, and resources without reading every card.</p>
+        </div>
+        <div class="directory-summary">
+          <span>Flagship ecosystems first</span>
+          <span>Practice apps below</span>
+          <span>External links marked</span>
+        </div>
       </div>
 
-      <div class="grid-3">
-        <a href="projects/autismart.html" class="card" data-title="AutiSmart" data-tags="ai healthcare fyp case-study" data-category="featured" data-status="private">
-          <div class="card-top">
-            <div class="thumb">FYP</div>
-            <span class="status maintained">Case Study</span>
-          </div>
-          <h3>AutiSmart</h3>
-          <p>AI-assisted ASD detection and therapy workflows with multimodal signals, progress tracking, and clinical collaboration pathways.</p>
-          <div class="meta-row">
-            <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Healthcare</span>
-          </div>
-          <span class="cta-line">Open Case Details -></span>
-        </a>
-
-        <a href="https://alishah1029384756.github.io/educore-open-learning-hub/" target="_blank" rel="noreferrer noopener" class="card" data-title="EduCore Hub" data-tags="education mentoring resources" data-category="featured" data-status="live">
-          <div class="card-top">
-            <div class="thumb">EDU</div>
-            <span class="status live">Live</span>
-          </div>
-          <h3>EduCore Open Learning Hub</h3>
-          <p>Free learning portal with 400+ curated links across school, college, university, entry tests, and special support tracks.</p>
-          <div class="meta-row">
-            <span class="chip">Education</span><span class="chip">Mentoring</span><span class="chip">Curated Index</span>
-          </div>
-          <span class="cta-line">Open Hub -></span>
-        </a>
-
-        <a href="https://alishah1029384756.github.io/university-course-projects-hub/" target="_blank" rel="noreferrer noopener" class="card" data-title="University Course Projects Hub" data-tags="academic projects systems" data-category="featured" data-status="live">
-          <div class="card-top">
-            <div class="thumb">UNI</div>
-            <span class="status live">Live</span>
-          </div>
-          <h3>University Course Projects Hub</h3>
-          <p>16 coursework projects across systems, databases, networking, compilers, algorithms, and data science.</p>
-          <div class="meta-row">
-            <span class="chip">Academic</span><span class="chip">16 Projects</span><span class="chip">Depth</span>
-          </div>
-          <span class="cta-line">Browse Projects -></span>
-        </a>
-      </div>
-
-      <div class="case-grid">
-        <article class="case-box">
-          <h4>AutiSmart case snapshot</h4>
-          <p><strong>Problem:</strong> Fragmented ASD assessment and therapy tracking.<br><strong>Role:</strong> Full-stack lead in FYP team execution.<br><strong>Outcome:</strong> Unified digital pathway for evidence-led intervention cycles.</p>
-        </article>
-        <article class="case-box">
-          <h4>EduCore case snapshot</h4>
-          <p><strong>Problem:</strong> Resource discovery was scattered for Pakistani learners.<br><strong>Role:</strong> Curation architecture and implementation.<br><strong>Outcome:</strong> Fast searchable education map with broad access coverage.</p>
-        </article>
-        <article class="case-box">
-          <h4>University Hub snapshot</h4>
-          <p><strong>Problem:</strong> Course projects lacked structured discoverability.<br><strong>Role:</strong> Repository and narrative standardization.<br><strong>Outcome:</strong> Clear project index with better scanability for reviewers.</p>
-        </article>
+      <div class="filter-shell directory-filter-shell">
+        <div class="search-row directory-search-row">
+          <input id="directory-search" class="search-input" type="search" placeholder="Search the directory by name, stack, or outcome">
+          <button id="directory-filter-reset" class="btn btn-secondary" type="button">Reset</button>
+        </div>
+        <div class="filter-buttons" role="group" aria-label="Directory filters">
+          <button class="filter-btn active" type="button" data-directory-filter="all">All</button>
+          <button class="filter-btn" type="button" data-directory-filter="academic">Academic</button>
+          <button class="filter-btn" type="button" data-directory-filter="learning">Learning Tools</button>
+          <button class="filter-btn" type="button" data-directory-filter="personal">Personal Projects</button>
+          <button class="filter-btn" type="button" data-directory-filter="resources">Resources</button>
+        </div>
+        <div id="directory-results" class="results-row">0 sites shown</div>
       </div>
     </div>
   </section>
 
-  <section id="spotlight">
+  <section id="ecosystems" class="directory-section">
     <div class="container">
       <div class="section-head">
-        <div class="section-kicker">Spotlight</div>
-        <h2>Secondary High-Impact Tracks</h2>
-        <p class="section-note">These tracks are highlighted for context only. To avoid repeated links, use the Hub Directory below as the single launch area.</p>
+        <div class="section-kicker">Featured Ecosystems</div>
+        <h2>The Big 4</h2>
+        <p class="section-note">Flagship hubs with the strongest signal for recruiters, collaborators, and students.</p>
       </div>
 
-      <div class="grid-3 spotlight-grid">
-        <article class="card" aria-label="Web Dev Learning Hub spotlight">
-          <div class="card-top">
-            <div class="thumb">WEB</div>
-            <span class="status curated">Curriculum</span>
-          </div>
-          <h3>Web Dev Learning Hub</h3>
-          <p>Nine-module pathway from fundamentals to production-ready full-stack implementation.</p>
-          <div class="meta-row"><span class="chip">Learning</span><span class="chip">9 Modules</span></div>
-          <span class="cta-line">Launch from Hub Directory below -></span>
-        </article>
-
-        <article class="card" aria-label="FAST NUCES Resources spotlight">
-          <div class="card-top">
-            <div class="thumb">FAST</div>
-            <span class="status curated">Curated</span>
-          </div>
-          <h3>FAST NUCES Resources</h3>
-          <p>Semester-wise references, notes, and study resources to reduce discovery friction for students.</p>
-          <div class="meta-row"><span class="chip">University</span><span class="chip">Resources</span></div>
-          <span class="cta-line">Launch from Hub Directory below -></span>
-        </article>
-
-        <article class="card" aria-label="High Impact Student Projects spotlight">
-          <div class="card-top">
-            <div class="thumb">HI</div>
-            <span class="status curated">Guides</span>
-          </div>
-          <h3>High Impact Student Projects Hub</h3>
-          <p>Structured guides for beginners, interview prep, FAST curriculum focus, and AI specialization tracks.</p>
-          <div class="meta-row"><span class="chip">58+ Guides</span><span class="chip">Mentoring</span></div>
-          <span class="cta-line">Launch from Hub Directory below -></span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="hubs">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-kicker">Hubs</div>
-        <h2>Hub Directory: Search and Filter</h2>
-        <p class="section-note">Use keyword search and category filter to find the right hub quickly. Keyboard: press slash to focus this search box.</p>
-      </div>
-
-      <div class="filter-shell">
-        <div class="search-row">
-          <input id="hub-search" class="search-input" type="search" placeholder="Search hubs by keyword, audience, stack, or goal">
-          <select id="hub-status" class="search-select" aria-label="Filter hubs by status">
-            <option value="all">All statuses</option>
-            <option value="live">Live</option>
-            <option value="maintained">Maintained</option>
-            <option value="curated">Curated</option>
-          </select>
-          <button id="hub-filter-reset" class="btn btn-secondary" type="button">Reset</button>
-        </div>
-        <div class="filter-buttons" role="group" aria-label="Hub category filters">
-          <button class="filter-btn active" type="button" data-hub-filter="all">All</button>
-          <button class="filter-btn" type="button" data-hub-filter="academic">Academic</button>
-          <button class="filter-btn" type="button" data-hub-filter="learning">Learning</button>
-          <button class="filter-btn" type="button" data-hub-filter="resources">Resources</button>
-          <button class="filter-btn" type="button" data-hub-filter="mentorship">Mentorship</button>
-        </div>
-        <div id="hub-results-count" class="results-row">0 hubs shown</div>
-      </div>
-
-      <div class="grid-3">
-        <a class="card searchable-hub-card" data-hub-category="academic" data-hub-status="live" data-hub-text="university course projects hub academic systems databases networking compilers algorithms" href="https://alishah1029384756.github.io/university-course-projects-hub/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">UNI</div><span class="status live">Live</span></div>
-          <h3>University Course Projects Hub</h3>
-          <p>Best for recruiters and faculty reviewing academic depth and implementation range.</p>
-          <div class="meta-row"><span class="chip">Academic</span><span class="chip">16 Projects</span></div>
-          <span class="cta-line">Open Hub -></span>
+      <div class="directory-grid featured-grid">
+        <a class="directory-card featured-card" data-directory-category="academic" data-directory-text="university course projects hub academic systems databases networking compilers algorithms 16 projects maintained" href="https://alishah1029384756.github.io/university-course-projects-hub/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-uni"><span>UNI</span><small>16 projects</small></div>
+          <div class="card-head"><div class="card-mark">UNI</div><div><p class="card-eyebrow">Academic</p><h3>University Course Projects Hub</h3></div><span class="status live">Updated 2026</span></div>
+          <p class="card-tagline">16 coursework projects across systems, databases, networking, compilers, algorithms, and data science.</p>
+          <div class="card-badges"><span class="chip">Systems</span><span class="chip">16 Projects</span><span class="chip">Maintained</span></div>
+          <span class="card-cta">Browse 16+ Projects -></span>
         </a>
 
-        <a class="card searchable-hub-card" data-hub-category="learning" data-hub-status="curated" data-hub-text="web development learning hub curriculum full stack modules roadmap" href="https://alishah1029384756.github.io/web-dev-learning-hub/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">WEB</div><span class="status curated">Curated</span></div>
-          <h3>Web Dev Learning Hub</h3>
-          <p>Best for students wanting a module-based path from fundamentals to deployable apps.</p>
-          <div class="meta-row"><span class="chip">Learning</span><span class="chip">9 Modules</span></div>
-          <span class="cta-line">Open Hub -></span>
+        <a class="directory-card featured-card" data-directory-category="learning" data-directory-text="web dev learning hub curriculum full stack modules roadmap html css javascript react 9 modules" href="https://alishah1029384756.github.io/web-dev-learning-hub/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-web"><span>WEB</span><small>9 modules</small></div>
+          <div class="card-head"><div class="card-mark">WEB</div><div><p class="card-eyebrow">Learning Tools</p><h3>Web Dev Learning Hub</h3></div><span class="status maintained">Curriculum</span></div>
+          <p class="card-tagline">A structured 9-module path from fundamentals to production-ready full-stack implementation.</p>
+          <div class="card-badges"><span class="chip">HTML/CSS</span><span class="chip">React</span><span class="chip">9 Modules</span></div>
+          <span class="card-cta">Open Learning Track -></span>
         </a>
 
-        <a class="card searchable-hub-card" data-hub-category="mentorship" data-hub-status="maintained" data-hub-text="high impact student projects guides interview prep beginner ai ml" href="https://alishah1029384756.github.io/high-impact-student-projects-hub/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">HI</div><span class="status maintained">Maintained</span></div>
-          <h3>High Impact Student Projects Hub</h3>
-          <p>Best for guided project-building, interview prep, and milestone-based growth paths.</p>
-          <div class="meta-row"><span class="chip">Mentoring</span><span class="chip">58+ Guides</span></div>
-          <span class="cta-line">Open Hub -></span>
+        <a class="directory-card featured-card" data-directory-category="learning" data-directory-text="high impact student projects hub guides interview prep beginner ai ml mentorship 58 guides" href="https://alishah1029384756.github.io/high-impact-student-projects-hub/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-hi"><span>HI</span><small>58+ guides</small></div>
+          <div class="card-head"><div class="card-mark">HI</div><div><p class="card-eyebrow">Learning Tools</p><h3>High-Impact Student Projects Hub</h3></div><span class="status curated">Guides</span></div>
+          <p class="card-tagline">Guided routes for beginners, interview prep, FAST curriculum focus, and AI/ML specializations.</p>
+          <div class="card-badges"><span class="chip">Mentorship</span><span class="chip">58+ Guides</span><span class="chip">Paths</span></div>
+          <span class="card-cta">Explore Guides -></span>
         </a>
 
-        <a class="card searchable-hub-card" data-hub-category="resources" data-hub-status="curated" data-hub-text="fast nuces notes past papers semester resources university" href="https://alishah1029384756.github.io/fast-nuces-resources/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">FAST</div><span class="status curated">Curated</span></div>
-          <h3>FAST NUCES Resources</h3>
-          <p>Best for fast access to notes, papers, and semester-aligned student references.</p>
-          <div class="meta-row"><span class="chip">Resources</span><span class="chip">Semester-wise</span></div>
-          <span class="cta-line">Open Hub -></span>
-        </a>
-
-        <a class="card searchable-hub-card" data-hub-category="mentorship" data-hub-status="live" data-hub-text="educore open learning hub pakistani students school college university resources" href="https://alishah1029384756.github.io/educore-open-learning-hub/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">EDU</div><span class="status live">Live</span></div>
-          <h3>EduCore Open Learning Hub</h3>
-          <p>Best for school-to-university students needing high-volume curated educational pathways.</p>
-          <div class="meta-row"><span class="chip">Education</span><span class="chip">400+ Links</span></div>
-          <span class="cta-line">Open Hub -></span>
+        <a class="directory-card featured-card" data-directory-category="resources" data-directory-text="educore open learning hub educational resources school college university entry test special education 400 links" href="https://alishah1029384756.github.io/educore-open-learning-hub/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-edu"><span>EDU</span><small>400+ links</small></div>
+          <div class="card-head"><div class="card-mark">EDU</div><div><p class="card-eyebrow">Resources</p><h3>EduCore Open Learning Hub</h3></div><span class="status live">Active</span></div>
+          <p class="card-tagline">A searchable learning portal with 400+ curated links across school, college, university, and support tracks.</p>
+          <div class="card-badges"><span class="chip">Education</span><span class="chip">400+ Links</span><span class="chip">Live</span></div>
+          <span class="card-cta">Access 400+ Resources -></span>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="apps">
+  <section id="resources" class="directory-section">
     <div class="container">
       <div class="section-head">
-        <div class="section-kicker">Apps</div>
-        <h2>Application Directory</h2>
-        <p class="section-note">Practice and production-style frontend apps with direct launch links and stack labels.</p>
+        <div class="section-kicker">Utility & Resources</div>
+        <h2>Fast access pages that support the main ecosystem</h2>
+        <p class="section-note">These cards are smaller by design so the flagship ecosystems stay dominant.</p>
       </div>
 
-      <div class="filter-shell">
-        <div class="search-row">
-          <input id="app-search" class="search-input" type="search" placeholder="Search apps by name, purpose, or tech">
-          <select id="app-kind" class="search-select" aria-label="Filter apps by type">
-            <option value="all">All app types</option>
-            <option value="practice">Practice</option>
-            <option value="production">Production style</option>
-          </select>
-          <button id="app-filter-reset" class="btn btn-secondary" type="button">Reset</button>
-        </div>
-        <div class="filter-buttons" role="group" aria-label="App technology filters">
-          <button class="filter-btn active" type="button" data-app-filter="all">All</button>
-          <button class="filter-btn" type="button" data-app-filter="javascript">JavaScript</button>
-          <button class="filter-btn" type="button" data-app-filter="api">API</button>
-          <button class="filter-btn" type="button" data-app-filter="productivity">Productivity</button>
-        </div>
-        <div id="app-results-count" class="results-row">0 apps shown</div>
-      </div>
-
-      <div class="grid-3">
-        <a class="card searchable-app-card" data-app-category="javascript" data-app-kind="practice" data-app-text="calculator javascript math expression evaluation" href="https://alishah1029384756.github.io/calculator/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">CALC</div><span class="status curated">Practice</span></div>
-          <h3>Calculator</h3>
-          <p>Expression-based calculator focused on JavaScript logic and UI handling fundamentals.</p>
-          <div class="meta-row"><span class="chip">JavaScript</span><span class="chip">Math</span></div>
-          <span class="cta-line">Launch App -></span>
+      <div class="directory-grid utility-grid">
+        <a class="directory-card utility-card" data-directory-category="resources" data-directory-text="fast nuces resources semester notes past papers study material university resources" href="https://alishah1029384756.github.io/fast-nuces-resources/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-fast"><span>FAST</span><small>Semester-wise</small></div>
+          <div class="card-head"><div class="card-mark">FAST</div><div><p class="card-eyebrow">Resources</p><h3>FAST NUCES Resources</h3></div><span class="status curated">Updated</span></div>
+          <p class="card-tagline">Semester-wise notes, past papers, course links, and practical references for students.</p>
+          <div class="card-badges"><span class="chip">University</span><span class="chip">Notes</span><span class="chip">Papers</span></div>
+          <span class="card-cta">Open Resource Hub -></span>
         </a>
 
-        <a class="card searchable-app-card" data-app-category="productivity" data-app-kind="practice" data-app-text="todo task management local storage productivity" href="https://alishah1029384756.github.io/todo-app/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">TODO</div><span class="status curated">Practice</span></div>
-          <h3>Todo App</h3>
-          <p>Task organization app with local persistence and filterable workflow states.</p>
-          <div class="meta-row"><span class="chip">Productivity</span><span class="chip">Local Storage</span></div>
-          <span class="cta-line">Launch App -></span>
+        <a class="directory-card utility-card" data-directory-category="academic" data-directory-text="project directory case studies flagship work autismart project index" href="projects.html">
+          <div class="card-preview preview-projects"><span>PROJ</span><small>Case studies</small></div>
+          <div class="card-head"><div class="card-mark">APPS</div><div><p class="card-eyebrow">Academic</p><h3>Projects Directory</h3></div><span class="status maintained">Core</span></div>
+          <p class="card-tagline">The main entry point for project case studies, technical depth, and outcomes.</p>
+          <div class="card-badges"><span class="chip">Projects</span><span class="chip">Case Studies</span><span class="chip">Internal</span></div>
+          <span class="card-cta">Review Projects -></span>
         </a>
 
-        <a class="card searchable-app-card" data-app-category="productivity" data-app-kind="practice" data-app-text="expense tracker finance budget categories charts" href="https://alishah1029384756.github.io/expense-tracker/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">MNY</div><span class="status curated">Practice</span></div>
-          <h3>Expense Tracker</h3>
-          <p>Budget-focused tracker for personal finance categorization and trend inspection.</p>
-          <div class="meta-row"><span class="chip">Finance</span><span class="chip">Tracking</span></div>
-          <span class="cta-line">Launch App -></span>
+        <a class="directory-card utility-card" data-directory-category="personal" data-directory-text="cv professional summary skills experience portfolio profile" href="cv.html">
+          <div class="card-preview preview-cv"><span>CV</span><small>Profile</small></div>
+          <div class="card-head"><div class="card-mark">CV</div><div><p class="card-eyebrow">Personal Projects</p><h3>CV Page</h3></div><span class="status live">Ready</span></div>
+          <p class="card-tagline">Professional snapshot with skills, experience, and concise role fit.</p>
+          <div class="card-badges"><span class="chip">Profile</span><span class="chip">Experience</span><span class="chip">Ready</span></div>
+          <span class="card-cta">Open CV -></span>
         </a>
 
-        <a class="card searchable-app-card" data-app-category="api" data-app-kind="practice" data-app-text="weather app api forecast location search" href="https://alishah1029384756.github.io/weather-app/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">WTHR</div><span class="status curated">Practice</span></div>
-          <h3>Weather App</h3>
-          <p>Real-time forecast viewer with city search and weather API integration.</p>
-          <div class="meta-row"><span class="chip">API</span><span class="chip">Forecast</span></div>
-          <span class="cta-line">Launch App -></span>
+        <a class="directory-card utility-card" data-directory-category="personal" data-directory-text="about contact journey focus direction collaboration" href="about.html">
+          <div class="card-preview preview-about"><span>INFO</span><small>Contact</small></div>
+          <div class="card-head"><div class="card-mark">INFO</div><div><p class="card-eyebrow">Personal Projects</p><h3>About / Contact</h3></div><span class="status maintained">Updated</span></div>
+          <p class="card-tagline">Context, collaboration focus, and the direction behind the work.</p>
+          <div class="card-badges"><span class="chip">Journey</span><span class="chip">Contact</span><span class="chip">Updated</span></div>
+          <span class="card-cta">Open About Page -></span>
         </a>
 
-        <a class="card searchable-app-card" data-app-category="javascript" data-app-kind="practice" data-app-text="quiz app interactive scoring js" href="https://alishah1029384756.github.io/quiz-app/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">QUIZ</div><span class="status curated">Practice</span></div>
-          <h3>Quiz App</h3>
-          <p>Interactive quiz interface with instant scoring and answer feedback loops.</p>
-          <div class="meta-row"><span class="chip">JavaScript</span><span class="chip">Scoring</span></div>
-          <span class="cta-line">Launch App -></span>
-        </a>
-
-        <a class="card searchable-app-card" data-app-category="productivity" data-app-kind="practice" data-app-text="notes app markdown organization" href="https://alishah1029384756.github.io/notes-app/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">NOTE</div><span class="status curated">Practice</span></div>
-          <h3>Notes App</h3>
-          <p>Simple note-taking utility for quick capture and lightweight text organization.</p>
-          <div class="meta-row"><span class="chip">Notes</span><span class="chip">Utility</span></div>
-          <span class="cta-line">Launch App -></span>
-        </a>
-
-        <a class="card searchable-app-card" data-app-category="javascript" data-app-kind="production" data-app-text="portfolio site projects showcase" href="https://alishah1029384756.github.io/portfolio/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">PORT</div><span class="status live">Production</span></div>
-          <h3>Portfolio Site App</h3>
-          <p>Production-style project showcase with profile presentation and structured sections.</p>
-          <div class="meta-row"><span class="chip">Portfolio</span><span class="chip">Production</span></div>
-          <span class="cta-line">Launch App -></span>
-        </a>
-
-        <a class="card searchable-app-card" data-app-category="javascript" data-app-kind="practice" data-app-text="html practice semantics basics" href="https://alishah1029384756.github.io/html-practice-project/" target="_blank" rel="noreferrer noopener">
-          <div class="card-top"><div class="thumb">HTML</div><span class="status curated">Practice</span></div>
-          <h3>HTML Practice Project</h3>
-          <p>Semantic markup and structure-focused exercise for foundational web development practice.</p>
-          <div class="meta-row"><span class="chip">HTML</span><span class="chip">Fundamentals</span></div>
-          <span class="cta-line">Launch App -></span>
+        <a class="directory-card utility-card" data-directory-category="personal" data-directory-text="github source code repositories contributions" href="https://github.com/AliShah1029384756" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-github"><span>GIT</span><small>Source code</small></div>
+          <div class="card-head"><div class="card-mark">GIT</div><div><p class="card-eyebrow">Personal Projects</p><h3>GitHub</h3></div><span class="status live">Source</span></div>
+          <p class="card-tagline">Repositories, source code, and contribution history in one place.</p>
+          <div class="card-badges"><span class="chip">Repos</span><span class="chip">Source</span><span class="chip">External</span></div>
+          <span class="card-cta">Open GitHub -></span>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="paths">
+  <section id="lab" class="directory-section">
     <div class="container">
       <div class="section-head">
-        <div class="section-kicker">Start Paths</div>
-        <h2>Pick Your Route</h2>
-        <p class="section-note">Guided entry points for different goals so visitors do not need to manually decode the full directory.</p>
+        <div class="section-kicker">Developer Lab</div>
+        <h2>Frontend practice and production-style experiments</h2>
+        <p class="section-note">Practice apps are grouped below so they do not compete visually with the flagship hubs.</p>
       </div>
-      <div class="path-grid">
-        <article class="path">
-          <h3>For Recruiters</h3>
-          <p>Start with Featured, then open Projects and CV for technical depth, outcomes, and role fit.</p>
-          <a href="projects.html">Open Projects and CV route -></a>
-        </article>
-        <article class="path">
-          <h3>For Students</h3>
-          <p>Start with University Hub and Web Dev Learning Hub for structured coursework and growth plans.</p>
-          <a href="https://alishah1029384756.github.io/university-course-projects-hub/" target="_blank" rel="noreferrer noopener">Open Student route -></a>
-        </article>
-        <article class="path">
-          <h3>For Mentorship</h3>
-          <p>Start with EduCore and High Impact Hub for guided resources and mentorship-focused pathways.</p>
-          <a href="https://alishah1029384756.github.io/educore-open-learning-hub/" target="_blank" rel="noreferrer noopener">Open Mentorship route -></a>
-        </article>
+
+      <div class="lab-split">
+        <a class="directory-card lab-card lab-featured" data-directory-category="personal" data-directory-text="portfolio site app production style personal portfolio showcase" href="https://alishah1029384756.github.io/portfolio/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-portfolio"><span>PORT</span><small>Production</small></div>
+          <div class="card-head"><div class="card-mark">PORT</div><div><p class="card-eyebrow">Production-style</p><h3>Portfolio Site App</h3></div><span class="status live">Showcase</span></div>
+          <p class="card-tagline">A polished project showcase with profile presentation and structured sections.</p>
+          <div class="card-badges"><span class="chip">Production</span><span class="chip">Showcase</span><span class="chip">Personal</span></div>
+          <span class="card-cta">Launch Showcase -></span>
+        </a>
+        <div class="lab-notes">
+          <p class="section-kicker">Practice Bench</p>
+          <h3>Smaller builds that show core frontend skills</h3>
+          <p>These are compact experiments used to demonstrate JavaScript logic, API handling, storage, and semantic HTML.</p>
+        </div>
+      </div>
+
+      <div class="directory-grid lab-grid">
+        <a class="directory-card lab-card" data-directory-category="personal" data-directory-text="calculator javascript math expression evaluation" href="https://alishah1029384756.github.io/calculator/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-calc"><span>CALC</span><small>Logic</small></div>
+          <div class="card-head"><div class="card-mark">CALC</div><div><p class="card-eyebrow">Practice</p><h3>Calculator</h3></div><span class="status curated">JavaScript</span></div>
+          <p class="card-tagline">Expression-based calculator focused on JavaScript logic and UI handling.</p>
+          <div class="card-badges"><span class="chip">Math</span><span class="chip">JS</span></div>
+          <span class="card-cta">Launch App -></span>
+        </a>
+
+        <a class="directory-card lab-card" data-directory-category="personal" data-directory-text="todo app task management local storage productivity" href="https://alishah1029384756.github.io/todo-app/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-todo"><span>TODO</span><small>Workflow</small></div>
+          <div class="card-head"><div class="card-mark">TODO</div><div><p class="card-eyebrow">Practice</p><h3>Todo App</h3></div><span class="status curated">Persistence</span></div>
+          <p class="card-tagline">Task organization with local storage and filterable workflow states.</p>
+          <div class="card-badges"><span class="chip">Storage</span><span class="chip">Productivity</span></div>
+          <span class="card-cta">Launch App -></span>
+        </a>
+
+        <a class="directory-card lab-card" data-directory-category="personal" data-directory-text="expense tracker budget finance categories charts" href="https://alishah1029384756.github.io/expense-tracker/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-expense"><span>MNY</span><small>Charts</small></div>
+          <div class="card-head"><div class="card-mark">MNY</div><div><p class="card-eyebrow">Practice</p><h3>Expense Tracker</h3></div><span class="status curated">Finance</span></div>
+          <p class="card-tagline">Budget-focused tracker for categorization and trend inspection.</p>
+          <div class="card-badges"><span class="chip">Finance</span><span class="chip">Tracking</span></div>
+          <span class="card-cta">Launch App -></span>
+        </a>
+
+        <a class="directory-card lab-card" data-directory-category="personal" data-directory-text="weather app api forecast location search" href="https://alishah1029384756.github.io/weather-app/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-weather"><span>WTHR</span><small>API</small></div>
+          <div class="card-head"><div class="card-mark">WTHR</div><div><p class="card-eyebrow">Practice</p><h3>Weather App</h3></div><span class="status curated">API</span></div>
+          <p class="card-tagline">Real-time forecast viewer with city search and weather API integration.</p>
+          <div class="card-badges"><span class="chip">API</span><span class="chip">Forecast</span></div>
+          <span class="card-cta">Launch App -></span>
+        </a>
+
+        <a class="directory-card lab-card" data-directory-category="personal" data-directory-text="quiz app interactive scoring javascript" href="https://alishah1029384756.github.io/quiz-app/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-quiz"><span>QUIZ</span><small>Scoring</small></div>
+          <div class="card-head"><div class="card-mark">QUIZ</div><div><p class="card-eyebrow">Practice</p><h3>Quiz App</h3></div><span class="status curated">Scoring</span></div>
+          <p class="card-tagline">Interactive quiz interface with instant scoring and feedback loops.</p>
+          <div class="card-badges"><span class="chip">JavaScript</span><span class="chip">Logic</span></div>
+          <span class="card-cta">Launch App -></span>
+        </a>
+
+        <a class="directory-card lab-card" data-directory-category="personal" data-directory-text="notes app markdown organization" href="https://alishah1029384756.github.io/notes-app/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-notes"><span>NOTE</span><small>Capture</small></div>
+          <div class="card-head"><div class="card-mark">NOTE</div><div><p class="card-eyebrow">Practice</p><h3>Notes App</h3></div><span class="status curated">Utility</span></div>
+          <p class="card-tagline">A simple note-taking utility for quick capture and text organization.</p>
+          <div class="card-badges"><span class="chip">Notes</span><span class="chip">Utility</span></div>
+          <span class="card-cta">Launch App -></span>
+        </a>
+
+        <a class="directory-card lab-card" data-directory-category="personal" data-directory-text="html practice project semantics basics" href="https://alishah1029384756.github.io/html-practice-project/" target="_blank" rel="noreferrer noopener">
+          <div class="card-preview preview-html"><span>HTML</span><small>Semantics</small></div>
+          <div class="card-head"><div class="card-mark">HTML</div><div><p class="card-eyebrow">Practice</p><h3>HTML Practice Project</h3></div><span class="status curated">Fundamentals</span></div>
+          <p class="card-tagline">Semantic markup and structure-focused practice for foundational web development.</p>
+          <div class="card-badges"><span class="chip">HTML</span><span class="chip">Basics</span></div>
+          <span class="card-cta">Launch App -></span>
+        </a>
       </div>
     </div>
   </section>

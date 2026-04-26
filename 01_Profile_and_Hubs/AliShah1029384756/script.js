@@ -194,7 +194,7 @@ if (!isSitesPage) {
 }
 createProjectSwitcher();
 
-const revealTargets = document.querySelectorAll(".panel, .project-card, .project-item, .tech-category, .stat-card");
+const revealTargets = document.querySelectorAll(".panel, .project-card, .project-item, .tech-category, .stat-card, .directory-card");
 revealTargets.forEach((el, index) => {
   el.classList.add("reveal");
   el.style.animationDelay = `${Math.min(index * 40, 320)}ms`;
@@ -424,6 +424,80 @@ function setupSitesAppFilters() {
   applyAppFilters();
 }
 
+function setupSitesDirectoryFilters() {
+  const directoryCards = document.querySelectorAll(".directory-card");
+  const directorySearchInput = document.getElementById("directory-search");
+  const directoryFilterButtons = document.querySelectorAll("[data-directory-filter]");
+  const directoryResultsCount = document.getElementById("directory-results");
+  const directoryFilterReset = document.getElementById("directory-filter-reset");
+
+  if (!directoryCards.length || !directorySearchInput || !directoryFilterButtons.length) {
+    return;
+  }
+
+  let activeCategory = "all";
+
+  const applyDirectoryFilters = () => {
+    const query = directorySearchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    directoryCards.forEach((card) => {
+      const category = card.dataset.directoryCategory || "";
+      const text = (card.dataset.directoryText || card.textContent || "").toLowerCase();
+      const categoryMatch = activeCategory === "all" || category === activeCategory;
+      const queryMatch = query.length === 0 || text.includes(query);
+      const shouldShow = categoryMatch && queryMatch;
+
+      card.classList.toggle("is-hidden", !shouldShow);
+      if (shouldShow) {
+        visibleCount += 1;
+      }
+    });
+
+    if (directoryResultsCount) {
+      directoryResultsCount.textContent = `${visibleCount} site${visibleCount === 1 ? "" : "s"} shown`;
+    }
+  };
+
+  directoryFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeCategory = button.dataset.directoryFilter || "all";
+      directoryFilterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      applyDirectoryFilters();
+    });
+  });
+
+  directorySearchInput.addEventListener("input", applyDirectoryFilters);
+
+  if (directoryFilterReset) {
+    directoryFilterReset.addEventListener("click", () => {
+      activeCategory = "all";
+      directorySearchInput.value = "";
+      directoryFilterButtons.forEach((btn) => {
+        btn.classList.toggle("active", (btn.dataset.directoryFilter || "") === "all");
+      });
+      applyDirectoryFilters();
+      directorySearchInput.focus();
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    const isTypingField = event.target instanceof HTMLElement && (
+      event.target.tagName === "INPUT" ||
+      event.target.tagName === "TEXTAREA" ||
+      event.target.tagName === "SELECT"
+    );
+
+    if (event.key === "/" && !event.ctrlKey && !event.metaKey && !isTypingField) {
+      event.preventDefault();
+      directorySearchInput.focus();
+    }
+  });
+
+  applyDirectoryFilters();
+}
+
 function setupPortfolioTelemetry() {
   if (!window.location.pathname.endsWith("/sites.html") && !window.location.pathname.endsWith("sites.html")) {
     return;
@@ -579,6 +653,7 @@ if (!isSitesPage) {
   createFloatingDock();
 }
 createCommandOverlay();
+setupSitesDirectoryFilters();
 setupSitesHubFilters();
 setupSitesAppFilters();
 setupPortfolioTelemetry();
