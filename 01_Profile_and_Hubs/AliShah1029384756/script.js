@@ -187,7 +187,11 @@ function createProjectSwitcher() {
   header.insertAdjacentElement("afterend", switcher);
 }
 
-createGlobalPageRail();
+const isSitesPage = getCurrentPage() === "sites.html";
+
+if (!isSitesPage) {
+  createGlobalPageRail();
+}
 createProjectSwitcher();
 
 const revealTargets = document.querySelectorAll(".panel, .project-card, .project-item, .tech-category, .stat-card");
@@ -571,7 +575,9 @@ function createCommandOverlay() {
 }
 
 createScrollProgress();
-createFloatingDock();
+if (!isSitesPage) {
+  createFloatingDock();
+}
 createCommandOverlay();
 setupSitesHubFilters();
 setupSitesAppFilters();
