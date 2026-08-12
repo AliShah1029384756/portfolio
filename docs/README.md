@@ -8,6 +8,12 @@ This repository is no longer being treated as the final public portfolio. Its cu
 
 The archive exists so future profile/portfolio work can be derived from documented facts instead of repeatedly re-inspecting every repository.
 
+## Master Tracker
+
+The complete current **31-repository status map** is maintained in [`REPOSITORY_TRACKER.md`](REPOSITORY_TRACKER.md).
+
+**Rule:** check the tracker before touching a repository. If a repository is already marked `DONE`, `DOCUMENTED`, or `FROZEN`, do not repeat the same work unless there is a new concrete reason.
+
 ## Documentation Rules
 
 For each repository, record:
@@ -33,27 +39,17 @@ For each repository, record:
 - **ACTIVE** — known improvement work remains
 - **HOLD** — intentionally deferred
 - **FINAL** — reserved for the final profile/portfolio repositories
+- **HUB** — documentation/index repository rather than a project showcase
 
-## Repository Map
+## Current Priority
 
-| Repository | Role | Status |
-|---|---|---|
-| `Fyp-Autismart` | Main public FYP / AutiSmart | DONE |
-| `EduCore` / `educore-open-learning-hub` | General open-learning platform | DOCUMENTED |
-| `ClinicOS` | Clinic/therapy management project | DONE |
-| `SchoolIEP` | Education/IEP platform | DONE |
-| `ecommerce-website` | Full-stack e-commerce project | DONE |
-| `auth-app` | Authentication/full-stack project | DONE |
-| `p2p-communication-system` | Networking/P2P project | DONE |
-| `compiler-project` | Compiler-design coursework | DOCUMENTED |
-| `bank-testing` | Java/JUnit testing project | FROZEN |
-| `university-course-projects` | Academic project archive | FROZEN |
-| `bus-schedule-optimizer` | Optimization algorithms project | FROZEN |
-| `fast-nuces-resources` | FAST-specific student resource hub | DOCUMENTED |
-| `high-impact-student-projects` | Student learning/impact repository | FROZEN |
-| `syed-muhammad-ali-naqvi` | 3D/interactive portfolio experiment | HOLD / FINAL |
-| `portfolio` | This documentation archive | DOCUMENTATION HUB |
-| `AliShah1029384756` | GitHub profile repository | FINAL — later |
+Only these areas currently require meaningful attention:
+
+1. `Fyp-Autismart` — final runtime/security/deployment verification.
+2. `syed-muhammad-ali-naqvi` — intentionally HOLD for the later 3D/interactive redesign.
+3. `AliShah1029384756` — final GitHub profile update after the repository audit is stable.
+
+Everything else should be treated according to the master tracker rather than repeatedly re-audited.
 
 ## Portfolio Relationship
 
@@ -70,10 +66,16 @@ Do not duplicate improvement work simply because a project appears in both place
 
 When the final GitHub profile and premium portfolio are updated:
 
-1. Read this archive first.
-2. Select the strongest projects based on current goals.
-3. Verify only facts that may have changed.
-4. Update `AliShah1029384756` profile repository.
-5. Update `syed-muhammad-ali-naqvi` as the premium interactive/3D portfolio.
+1. Read the master repository tracker first.
+2. Read the relevant per-repository documentation.
+3. Select the strongest projects based on current goals.
+4. Reuse only documented, proof-backed facts.
+5. Verify only facts that may have changed.
+6. Update `AliShah1029384756` profile repository.
+7. Update `syed-muhammad-ali-naqvi` as the premium interactive/3D portfolio.
 
-This archive should be updated whenever a repository is meaningfully changed.
+## Maintenance Rule
+
+Whenever a repository receives a meaningful change, update its per-repository documentation **and** the master tracker in the same work cycle.
+
+This archive should remain the single working source for future portfolio/profile work.
