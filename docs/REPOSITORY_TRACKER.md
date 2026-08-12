@@ -18,7 +18,7 @@
 
 | # | Repository | Role | Current status | Next action |
 |---:|---|---|---|---|
-| 1 | `Fyp-Autismart` | Final/public FYP flagship | **ACTIVE** | Final runtime verification; security/deployment verification |
+| 1 | `Fyp-Autismart` | Final/public FYP flagship | **ACTIVE** | Runtime verification; security/deployment verification |
 | 2 | `AutiSmart` | Personal/experimental FYP version | **HOLD** | Do not mix with final FYP; revisit only if needed |
 | 3 | `ClinicOS` | Healthcare/clinic management | **DONE** | Freeze |
 | 4 | `SchoolIEP` | Education/IEP platform | **DONE** | Freeze |
@@ -73,9 +73,20 @@ A project appearing inside `university-course-projects` does not mean it should 
 - `high-impact-student-projects-hub` presents/navigation for `high-impact-student-projects`.
 - `university-course-projects-hub` presents/navigation for `university-course-projects`.
 
+## Recent Completed Work
+
+### Fyp-Autismart
+
+- Removed personal/internal planning documentation from the public repository.
+- Removed MongoDB URI exposure from backend connection-error logging.
+- Verified the backend now reports only whether the URI is set and does not print the credential/URI value.
+- Verified `.env`-based configuration is still loaded before service initialization.
+
+Latest security fix commit: `030f5f44c25629019a697b4a9431e14040e674bb`.
+
 ## Remaining Meaningful Work
 
-1. Finish only the genuinely pending `Fyp-Autismart` verification/security/deployment work.
+1. Finish only the genuinely pending `Fyp-Autismart` runtime/deployment verification.
 2. Keep the 3D portfolio on HOLD until the repository audit is finished and there is enough time to redesign it properly.
 3. Do the final GitHub profile repository update only after this tracker/archive is stable.
 4. Treat small practice repositories as completed supporting evidence; do not spend portfolio time polishing them further.
