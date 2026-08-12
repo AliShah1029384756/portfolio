@@ -18,7 +18,7 @@
 
 | # | Repository | Role | Current status | Next action |
 |---:|---|---|---|---|
-| 1 | `Fyp-Autismart` | Final/public FYP flagship | **ACTIVE** | Runtime verification; security/deployment verification |
+| 1 | `Fyp-Autismart` | Final/public FYP flagship | **DOCUMENTATION COMPLETE / VERIFIED** | Freeze; revisit only if deployment/docs change |
 | 2 | `AutiSmart` | Personal/experimental FYP version | **HOLD** | Do not mix with final FYP; revisit only if needed |
 | 3 | `ClinicOS` | Healthcare/clinic management | **DONE** | Freeze |
 | 4 | `SchoolIEP` | Education/IEP platform | **DONE** | Freeze |
@@ -73,20 +73,23 @@ A project appearing inside `university-course-projects` does not mean it should 
 - `high-impact-student-projects-hub` presents/navigation for `high-impact-student-projects`.
 - `university-course-projects-hub` presents/navigation for `university-course-projects`.
 
-## Recent Completed Work
+## Fyp-Autismart Documentation Record
 
-### Fyp-Autismart
+- Final Year Project developed and presented collaboratively at FAST-NUCES, Chiniot-Faisalabad Campus.
+- FYP-I (Semester 7): **A+**.
+- FYP-II (Semester 8): **A-**.
+- The team deployed and ran the project for the FYP demonstration/presentation.
+- Live deployment is documented in the README: `https://auti-smart.vercel.app/`.
+- The README now explains that external deployment services/credentials may expire and that original secrets are intentionally not included.
+- The README explicitly separates the final team FYP from the author's personal experimental `AutiSmart` repository.
+- MongoDB URI exposure was removed from backend connection-error logging.
 
-- Removed personal/internal planning documentation from the public repository.
-- Removed MongoDB URI exposure from backend connection-error logging.
-- Verified the backend now reports only whether the URI is set and does not print the credential/URI value.
-- Verified `.env`-based configuration is still loaded before service initialization.
-
+Latest README documentation commit: `91fa17cc8b6bff8859ad7c98117790349ec4a990`.
 Latest security fix commit: `030f5f44c25629019a697b4a9431e14040e674bb`.
 
 ## Remaining Meaningful Work
 
-1. Finish only the genuinely pending `Fyp-Autismart` runtime/deployment verification.
+1. No runtime verification is currently required from the repository audit; the project has already been run, deployed, and presented by the owner/team.
 2. Keep the 3D portfolio on HOLD until the repository audit is finished and there is enough time to redesign it properly.
 3. Do the final GitHub profile repository update only after this tracker/archive is stable.
 4. Treat small practice repositories as completed supporting evidence; do not spend portfolio time polishing them further.
@@ -94,4 +97,4 @@ Latest security fix commit: `030f5f44c25629019a697b4a9431e14040e674bb`.
 
 ## Maintenance Rule
 
-Before working on any repository, check this file first. If it is already marked **DONE**, **DOCUMENTED**, or **FROZEN**, do not repeat the same work unless there is a new concrete reason.
+Before working on any repository, check this file first. If it is already marked **DONE**, **DOCUMENTED**, **FROZEN**, or **DOCUMENTATION COMPLETE / VERIFIED**, do not repeat the same work unless there is a new concrete reason.
