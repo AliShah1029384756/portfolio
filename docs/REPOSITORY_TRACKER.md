@@ -87,14 +87,78 @@ A project appearing inside `university-course-projects` does not mean it should 
 Latest README documentation commit: `91fa17cc8b6bff8859ad7c98117790349ec4a990`.
 Latest security fix commit: `030f5f44c25629019a697b4a9431e14040e674bb`.
 
+## Portfolio Presence Audit — Progress Log (20 Aug 2026)
+
+This section records the work completed during the current public online-presence improvement pass. It is separate from the 31-repository technical status map above because this pass audits the **public identity layer** across the GitHub profile repository, portfolio website, CV, project archive, and public hubs.
+
+### Completed in this pass
+
+1. **Final FYP public-positioning cleanup**
+   - Removed public FYP-I/FYP-II grades from the GitHub profile README.
+   - Kept the final team FYP identity distinct from the personal/experimental `AutiSmart` repository.
+   - Confirmed the website uses public/team-FYP wording rather than public grades.
+
+2. **GitHub profile README positioning**
+   - Added/strengthened SchoolIEP as a featured project.
+   - Added verified ClinicOS positioning/stack details.
+   - Added a direct Complete Project Archive link.
+   - Aligned the main profile positioning around Full-Stack Software Engineering, AI-assisted development, Healthcare, and EdTech rather than making Data/BI appear as the primary identity.
+
+3. **CV consistency**
+   - Updated the public AutiSmart technology stack to the current documented implementation instead of the stale HTML/CSS/JS wording.
+   - Added navigation toward the broader Project Archive.
+   - Kept sensitive/private academic details out of public-facing profile material.
+
+4. **Main portfolio website consistency**
+   - Updated the Home page AutiSmart stack to match the current public project positioning.
+   - Audited the Projects page and confirmed that its 13 cards are curated portfolio entries, not the complete repository inventory.
+   - Avoided falsely presenting all 31 GitHub repositories as 31 portfolio projects.
+
+5. **Project archive structure**
+   - Added `project-archive.html` as the broader documented-project archive.
+   - Expanded the archive beyond the original six supporting projects to include documented academic/supporting work such as Bank Testing, Bus Schedule Optimizer, Calculator, E-commerce Website, Expense Tracker, FAST-NUCES Resource Hub, EduCore, Auth App, P2P, Compiler, Chess, and smaller practice/API projects.
+   - Established the intended structure: **Featured Projects = curated recruiter-facing showcase; Project Archive = broader documented work; University Course Projects = academic collection.**
+
+6. **Detailed project case-study consistency**
+   - Updated the AutiSmart detailed case study so its technology description matches the current public `Fyp-Autismart` repository rather than the older HTML/CSS/JS stack wording.
+   - Cross-checked EduConnect against its repository README and found no change necessary.
+
+7. **No-change decisions recorded mentally during audit**
+   - Do not repeatedly modify repositories already marked DONE/DOCUMENTED/FROZEN without a concrete new reason.
+   - Do not inflate project counts by counting documentation hubs, profile repositories, and archives as individual portfolio projects.
+   - Do not overwrite large website files when the available GitHub connector cannot safely provide the complete current source.
+
+### Current next phase — ACTIVE
+
+**Social Preview / Open Graph Audit** is now the next active workstream.
+
+Problem identified: some public hubs do not provide a dedicated social/link preview image when their URL is shared on LinkedIn, WhatsApp, Facebook, etc. The main portfolio/site preview already has social-image metadata, but at least the University Course Projects Hub currently lacks `og:image` / `twitter:image` metadata.
+
+Next actions:
+
+1. Audit every important standalone public hub for `og:title`, `og:description`, `og:url`, `og:image`, image dimensions, and Twitter/X large-card metadata.
+2. Identify which hubs already have suitable preview assets and which need a new branded 1200×630 image.
+3. Create a consistent but hub-specific social-preview system rather than reusing one generic image everywhere.
+4. Add absolute canonical/preview URLs where required.
+5. Ensure the preview image paths are publicly reachable from the deployed GitHub Pages/Vercel site.
+6. Verify the metadata after deployment using live page source/preview validators where possible.
+7. Then continue the broader cross-page consistency audit: Home, About, Projects, Sites, CV, GitHub README, and public hubs.
+
+### Working rule for the next phase
+
+Do not ask the owner to manually patch every page. Make safe direct changes where the GitHub workflow supports them, verify each resulting commit/file, and only surface a manual step when the tooling genuinely cannot perform the operation safely.
+
 ## Remaining Meaningful Work
 
-1. No runtime verification is currently required from the repository audit; the project has already been run, deployed, and presented by the owner/team.
-2. Keep the 3D portfolio on HOLD until the repository audit is finished and there is enough time to redesign it properly.
-3. Do the final GitHub profile repository update only after this tracker/archive is stable.
-4. Treat small practice repositories as completed supporting evidence; do not spend portfolio time polishing them further.
-5. Update this tracker whenever a repository's status changes.
+1. **ACTIVE NOW:** Complete the Social Preview / Open Graph audit and implement missing preview metadata/assets across important public hubs.
+2. Finish cross-page consistency checks after the social-preview pass.
+3. Keep the 3D portfolio on HOLD until the repository audit is finished and there is enough time to redesign it properly.
+4. Do the final GitHub profile repository update only after this tracker/archive is stable.
+5. Treat small practice repositories as completed supporting evidence; do not spend portfolio time polishing them further.
+6. Update this tracker whenever a repository or public-presence workstream status changes.
 
 ## Maintenance Rule
 
 Before working on any repository, check this file first. If it is already marked **DONE**, **DOCUMENTED**, **FROZEN**, or **DOCUMENTATION COMPLETE / VERIFIED**, do not repeat the same work unless there is a new concrete reason.
+
+For the public-presence audit, update the **Portfolio Presence Audit — Progress Log** after each meaningful batch so the next session can resume from a known point without repeating completed work.
